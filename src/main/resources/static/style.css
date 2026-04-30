@@ -15,23 +15,32 @@ h1 {
     color: white;
 }
 
+/* Cards */
 .create-poll,
 .poll-card {
     background: white;
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
+/* Inputs */
 input {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
+    transition: 0.3s;
 }
 
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Buttons */
 button {
     margin-top: 15px;
     margin-right: 10px;
@@ -48,17 +57,36 @@ button:hover {
     opacity: 0.9;
 }
 
+/* Disabled button (after voting) */
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* Progress bar */
 .progress {
     width: 100%;
-    background: #ddd;
+    background: #eee;
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 10px;
 }
 
 .progress-bar {
-    background: #28a745;
+    background: linear-gradient(to right, #28a745, #6ddf6d);
     color: white;
     padding: 8px;
     text-align: center;
+    font-size: 14px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Poll title */
+.poll-card h2 {
+    margin-bottom: 10px;
+}
+
+/* Total votes text */
+.poll-card p strong {
+    color: #333;
 }

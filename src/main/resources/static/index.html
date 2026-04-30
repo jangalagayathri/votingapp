@@ -17,9 +17,12 @@
 
     <div class="create-poll">
 
+        <label>Poll Question:</label>
         <input type="text"
                id="question"
                placeholder="Enter poll question">
+
+        <p>Minimum 2, Maximum 4 options</p>
 
         <div id="options-container">
 
@@ -33,15 +36,14 @@
 
         </div>
 
-        <button onclick="addOption()">
-            Add Option
-        </button>
-
-        <button onclick="createPoll()">
-            Create Poll
-        </button>
+        <div class="buttons">
+            <button onclick="addOption()">Add Option</button>
+            <button onclick="createPoll()">Create Poll</button>
+        </div>
 
     </div>
+
+    <h2>All Polls</h2>
 
     <div id="polls"></div>
 
